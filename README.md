@@ -4,7 +4,8 @@ The framework-free static marketing site for StubFolio.
 
 ## Structure
 
-- `index.html` contains the complete page and SEO metadata.
+- `index.html` contains the marketing page and its SEO metadata.
+- `terms.html` contains the standalone Terms of Use page.
 - `styles.css` contains all responsive styling.
 - `script.js` only controls the mobile navigation.
 - `images/` and `fonts/` contain local assets.
@@ -27,4 +28,4 @@ Then open `http://localhost:8080/`.
 
 In the repository settings, set Pages to deploy from the `main` branch and the repository root. The checked-in files are the deployable site.
 
-The SEO files use `https://karm435.github.io/stubfolio.github.io/` as the canonical GitHub Pages URL. Update `index.html`, `robots.txt`, and `sitemap.xml` together when a custom production domain is connected.
+The site uses `https://stubfolio.karmaacademy.com.au/` as its canonical production URL. Keep the canonical tags, Open Graph URLs, `robots.txt`, and `sitemap.xml` aligned when the production domain changes.
