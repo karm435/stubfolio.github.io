@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://karm435.github.io/stubfolio.github.io/sitemap.xml
