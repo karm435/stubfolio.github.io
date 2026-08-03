@@ -69,6 +69,7 @@ img,
 svg {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -676,7 +677,9 @@ h3 {
 }
 
 .download-panel__icon {
-  width: clamp(82px, 8vw, 112px);
+  width: clamp(64px, 6vw, 80px);
+  height: auto;
+  aspect-ratio: 1;
   border-radius: 24%;
   box-shadow: 0 16px 34px rgba(8, 35, 81, 0.18);
 }
