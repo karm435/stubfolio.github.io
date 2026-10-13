@@ -1,7 +1,7 @@
 {
   "name": "StubFolio – Paystub Maker",
   "short_name": "StubFolio",
-  "description": "Professional paystub and payslip PDFs on iPhone and iPad.",
+  "description": "Professional paystub and payslip PDFs on iPhone, iPad, and Android.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#fbfcfe",

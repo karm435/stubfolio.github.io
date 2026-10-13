@@ -199,7 +199,7 @@ h3 {
   gap: clamp(1.2rem, 2.7vw, 2.4rem);
 }
 
-.site-navigation > a:not(.app-store-button) {
+.site-navigation > a:not(.nav-download) {
   position: relative;
   color: var(--navy);
   font-size: 0.88rem;
@@ -207,7 +207,7 @@ h3 {
   text-decoration: none;
 }
 
-.site-navigation > a:not(.app-store-button)::after {
+.site-navigation > a:not(.nav-download)::after {
   position: absolute;
   right: 0;
   bottom: -0.45rem;
@@ -220,7 +220,7 @@ h3 {
   transition: scale 180ms ease;
 }
 
-.site-navigation > a:not(.app-store-button):hover::after {
+.site-navigation > a:not(.nav-download):hover::after {
   scale: 1 1;
   transform-origin: left;
 }
@@ -237,25 +237,53 @@ h3 {
   color: var(--navy);
 }
 
-.app-store-button {
+.app-store-button,
+.google-play-button {
   display: inline-flex;
   width: 174px;
   border-radius: 10px;
   transition: translate 180ms ease, filter 180ms ease;
 }
 
-.app-store-button img {
+/* The Google Play badge is wider than the App Store badge; this width matches their heights. */
+.google-play-button {
+  width: 197px;
+}
+
+.app-store-button img,
+.google-play-button img {
   width: 100%;
   height: auto;
 }
 
-.app-store-button:hover {
+.app-store-button:hover,
+.google-play-button:hover {
   filter: brightness(1.08);
   translate: 0 -2px;
 }
 
-.app-store-button--compact {
-  width: 136px;
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-download {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: var(--navy);
+  color: var(--white);
+  padding: 0.62rem 1.1rem;
+  font-size: 0.86rem;
+  font-weight: 720;
+  text-decoration: none;
+  transition: background 180ms ease;
+}
+
+.nav-download:hover {
+  background: var(--blue-dark);
 }
 
 .hero {
@@ -287,8 +315,9 @@ h3 {
 
 .hero__actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 1.4rem;
+  gap: 1.1rem 1.4rem;
   margin-top: 2.1rem;
 }
 
@@ -464,6 +493,14 @@ h3 {
   translate: 0 -2rem;
 }
 
+.phone-sequence--android .device-frame {
+  aspect-ratio: 1080 / 2400;
+}
+
+.android-section__badge {
+  margin-top: 1.8rem;
+}
+
 .wide-product-crop {
   overflow: hidden;
   aspect-ratio: 1.56;
@@ -605,6 +642,79 @@ h3 {
   line-height: 1.65;
 }
 
+.privacy-policy {
+  margin-top: 2.5rem;
+  scroll-margin-top: 92px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-medium);
+  background: var(--paper);
+  padding: clamp(1.6rem, 4vw, 2.8rem);
+}
+
+.privacy-policy__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+
+.privacy-policy h3 {
+  font-size: clamp(1.45rem, 2.4vw, 1.85rem);
+}
+
+.privacy-policy__meta {
+  color: var(--navy);
+  font-size: 0.74rem;
+  font-weight: 720;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.privacy-policy__intro {
+  max-width: 70ch;
+  margin-top: 0.9rem;
+  font-size: 0.92rem;
+}
+
+.privacy-policy__list {
+  margin: 1.6rem 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.privacy-policy__list > div {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.3fr) minmax(0, 1fr);
+  gap: 0.35rem 2rem;
+  border-bottom: 1px solid var(--line);
+  padding-block: 1.1rem;
+}
+
+.privacy-policy__list > div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.privacy-policy dt {
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.privacy-policy dd {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.privacy-policy dd a {
+  color: var(--blue-dark);
+  font-weight: 650;
+  text-underline-offset: 0.2em;
+}
+
 .faq-section {
   background: var(--ice);
 }
@@ -698,6 +808,10 @@ h3 {
   font-size: 0.92rem;
 }
 
+.download-panel .store-badges {
+  justify-content: flex-end;
+}
+
 .site-footer {
   background: var(--navy-deep);
   color: var(--white);
@@ -776,6 +890,15 @@ h3 {
   .template-composition {
     min-height: 520px;
   }
+
+  .download-panel {
+    grid-template-columns: auto 1fr;
+  }
+
+  .download-panel .store-badges {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 819px) {
@@ -814,16 +937,17 @@ h3 {
     display: grid;
   }
 
-  .site-navigation > a:not(.app-store-button) {
+  .site-navigation > a:not(.nav-download) {
     border-bottom: 1px solid var(--line);
     padding: 1rem 0;
   }
 
-  .site-navigation > a:not(.app-store-button)::after {
+  .site-navigation > a:not(.nav-download)::after {
     display: none;
   }
 
-  .site-navigation .app-store-button {
+  .site-navigation .nav-download {
+    justify-self: start;
     margin-top: 1rem;
   }
 
@@ -908,13 +1032,6 @@ h3 {
     margin-bottom: 1.6rem;
   }
 
-  .download-panel {
-    grid-template-columns: auto 1fr;
-  }
-
-  .download-panel .app-store-button {
-    grid-column: 2;
-  }
 }
 
 @media (max-width: 560px) {
@@ -1016,9 +1133,13 @@ h3 {
     margin-inline: auto;
   }
 
-  .download-panel .app-store-button {
+  .download-panel .store-badges {
     grid-column: 1;
-    justify-self: center;
+    justify-content: center;
+  }
+
+  .privacy-policy__list > div {
+    grid-template-columns: 1fr;
   }
 
   .site-footer__inner {
@@ -1066,9 +1187,16 @@ h3 {
   line-height: 1.75;
 }
 
-.app-store-button--footer {
-  width: 154px;
+.store-badges--footer {
   margin-top: 1.8rem;
+}
+
+.store-badges--footer .app-store-button {
+  width: 154px;
+}
+
+.store-badges--footer .google-play-button {
+  width: 174px;
 }
 
 .site-footer__links {
@@ -1116,6 +1244,17 @@ h3 {
 .site-footer__bottom p {
   color: #8fa1b8;
   font-size: 0.75rem;
+}
+
+.site-footer__trademarks {
+  padding-bottom: 2rem;
+}
+
+.site-footer__trademarks p {
+  max-width: 90ch;
+  color: #7790ae;
+  font-size: 0.7rem;
+  line-height: 1.6;
 }
 
 @media (max-width: 760px) {

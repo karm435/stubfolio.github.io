@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StubFolio – Paystub Maker for iPhone &amp; iPad</title>
+    <title>StubFolio – Paystub Maker for iPhone, iPad &amp; Android</title>
     <meta
     name="description"
-    content="Create polished pay stubs and payslip PDFs on iPhone and iPad. Reuse employee details, run team paydays, customise templates, and work offline."
+    content="Create polished pay stubs and payslip PDFs on iPhone, iPad, and Android. Reuse employee details, run team paydays, customise templates, and work offline."
     />
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
     <meta name="theme-color" content="#eef7ff" />
@@ -21,20 +21,20 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="StubFolio" />
     <meta property="og:url" content="https://stubfolio.karmaacademy.com.au/" />
-    <meta property="og:title" content="StubFolio – Paystub Maker for iPhone &amp; iPad" />
+    <meta property="og:title" content="StubFolio – Paystub Maker for iPhone, iPad &amp; Android" />
     <meta
     property="og:description"
-    content="Create professional pay stub and payslip PDFs on iPhone and iPad, from one person to a whole team pay run."
+    content="Create professional pay stub and payslip PDFs on iPhone, iPad, and Android, from one person to a whole team pay run."
     />
     <meta property="og:image" content="https://stubfolio.karmaacademy.com.au/images/og-stubfolio.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="StubFolio paystub maker shown on iPhone and iPad" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="StubFolio – Paystub Maker for iPhone &amp; iPad" />
+    <meta name="twitter:title" content="StubFolio – Paystub Maker for iPhone, iPad &amp; Android" />
     <meta
     name="twitter:description"
-    content="Create professional pay stub and payslip PDFs on iPhone and iPad."
+    content="Create professional pay stub and payslip PDFs on iPhone, iPad, and Android."
     />
     <meta name="twitter:image" content="https://stubfolio.karmaacademy.com.au/images/og-stubfolio.png" />
 
@@ -66,11 +66,11 @@
             "@type": "MobileApplication",
             "@id": "https://stubfolio.karmaacademy.com.au/#app",
             "name": "StubFolio: Paystub Maker Pro",
-            "operatingSystem": "iOS, iPadOS",
+            "operatingSystem": "iOS, iPadOS, Android",
             "applicationCategory": "BusinessApplication",
-            "description": "A guided paystub maker for creating, customising, previewing, and sharing professional pay stub and payslip PDFs on iPhone and iPad.",
+            "description": "A guided paystub maker for creating, customising, previewing, and sharing professional pay stub and payslip PDFs on iPhone, iPad, and Android.",
             "url": "https://stubfolio.karmaacademy.com.au/",
-            "installUrl": "https://apps.apple.com/app/id6793854994",
+            "installUrl": ["https://apps.apple.com/app/id6793854994", "https://play.google.com/store/apps/details?id=com.karmaacademy.payly"],
             "image": "https://stubfolio.karmaacademy.com.au/images/stubfolio-icon.jpg",
             "publisher": { "@id": "https://stubfolio.karmaacademy.com.au/#organization" }
           },
@@ -83,7 +83,7 @@
                 "name": "Can I create paystubs without an internet connection?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Core paystub creation works offline. If you enable iCloud, your records can sync when your device is connected again."
+                  "text": "Yes. Core paystub creation works offline on iPhone, iPad, and Android. On Apple devices with iCloud turned on, your records sync when your device is connected again."
                 }
               },
               {
@@ -104,10 +104,10 @@
               },
               {
                 "@type": "Question",
-                "name": "Can I use StubFolio on both iPhone and iPad?",
+                "name": "Which devices does StubFolio run on?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. StubFolio is designed for both iPhone and iPad."
+                  "text": "StubFolio is available for iPhone and iPad on the App Store, and for Android phones and tablets running Android 14 or later on Google Play."
                 }
               },
               {
@@ -115,7 +115,15 @@
                 "name": "Where is my paystub data stored?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "StubFolio is local-first, with private iCloud sync available when enabled through your Apple account."
+                  "text": "StubFolio is local-first and has no account. Your work stays on your device. On iPhone and iPad, private iCloud sync is available when you turn it on through your Apple account. On Android, records are included in your device backup to your Google account when Android backup is on."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do my records and purchases move between Apple devices and Android?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The Apple and Android apps keep their records separately, and there is no StubFolio account to link them. Purchases are made through the App Store or Google Play and apply only to the app from that store."
                 }
               }
             ]
@@ -143,11 +151,10 @@
           <nav id="site-navigation" class="site-navigation" aria-label="Primary navigation">
             <a href="#features">Features</a>
             <a href="#how-it-works">How it works</a>
+            <a href="#android">Android</a>
             <a href="#privacy">Privacy</a>
             <a href="#faq">FAQ</a>
-            <a class="app-store-button app-store-button--compact" href="https://apps.apple.com/app/id6793854994" aria-label="Download StubFolio on the App Store" data-cta-location="header">
-              <img alt="Download on the App Store" width="924" height="310" src="images/download-on-app-store.svg">
-            </a>
+            <a class="nav-download" href="#download" data-cta-location="header">Get the app</a>
           </nav>
         </div>
       </header>
@@ -155,20 +162,25 @@
         <section class="hero section" id="top" aria-labelledby="hero-title">
           <div class="page-shell hero__grid">
             <div class="hero__copy">
-              <p class="eyebrow">Paystub maker for iPhone and iPad</p>
+              <p class="eyebrow">Paystub maker for iPhone, iPad, and Android</p>
               <h1 id="hero-title">Make every payday look professional.</h1>
-              <p class="hero__lede">StubFolio is a guided paystub maker for iPhone and iPad. Create, customise, preview, and share polished pay stub PDFs without wrestling with full payroll software.</p>
+              <p class="hero__lede">StubFolio is a guided paystub maker for iPhone, iPad, and Android. Create, customise, preview, and share polished pay stub PDFs without wrestling with full payroll software.</p>
               <div class="hero__actions">
-                <a class="app-store-button" href="https://apps.apple.com/app/id6793854994" aria-label="Download StubFolio on the App Store" data-cta-location="hero">
-                  <img alt="Download on the App Store" width="924" height="310" src="images/download-on-app-store.svg">
-                </a>
+                <div class="store-badges">
+                  <a class="app-store-button" href="https://apps.apple.com/app/id6793854994" aria-label="Download StubFolio on the App Store" data-cta-location="hero">
+                    <img alt="Download on the App Store" width="924" height="310" src="images/download-on-app-store.svg">
+                  </a>
+                  <a class="google-play-button" href="https://play.google.com/store/apps/details?id=com.karmaacademy.payly" aria-label="Get StubFolio on Google Play" data-cta-location="hero">
+                    <img alt="Get it on Google Play" width="239" height="71" src="images/get-it-on-google-play.svg">
+                  </a>
+                </div>
                 <a class="text-link" href="#how-it-works">See how it works <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true">
                     <path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z">
                     </path>
                   </svg>
                 </a>
               </div>
-              <p class="hero__note">Designed for iPhone and iPad. No separate account required.</p>
+              <p class="hero__note">On the App Store and Google Play. No separate account required.</p>
             </div>
             <div class="hero-devices" aria-label="StubFolio shown on iPhone and iPad">
               <figure class="device-frame device-frame--ipad hero-devices__ipad">
@@ -230,7 +242,7 @@
                 </path>
               </svg>
               <h2>Private and offline-first</h2>
-              <p>Create without a connection, then use private iCloud sync when you choose.</p>
+              <p>Create without a connection. Records stay on your device, with optional iCloud sync on Apple devices.</p>
             </article>
           </div>
         </section>
@@ -333,12 +345,52 @@
             </div>
           </div>
         </section>
+        <section class="story-section android-section section" id="android" aria-labelledby="android-title">
+          <div class="page-shell story-grid story-grid--copy-first">
+            <div class="story-copy">
+              <p class="eyebrow">Now on Android</p>
+              <h2 id="android-title">The same paystub maker, on Android.</h2>
+              <p>StubFolio for Android brings the guided editor, team pay runs, and polished PDF templates to Android phones and tablets. Your records stay on your device, and purchases are handled by Google Play.</p>
+              <ul class="check-list">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true">
+                    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z">
+                    </path>
+                  </svg> The same templates in A4 or US Letter</li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true">
+                    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z">
+                    </path>
+                  </svg> Share PDFs by email, message, or any app</li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true">
+                    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z">
+                    </path>
+                  </svg> For Android 14 and later</li>
+              </ul>
+              <a class="google-play-button android-section__badge" href="https://play.google.com/store/apps/details?id=com.karmaacademy.payly" aria-label="Get StubFolio on Google Play" data-cta-location="android">
+                <img alt="Get it on Google Play" width="239" height="71" src="images/get-it-on-google-play.svg">
+              </a>
+            </div>
+            <div class="phone-sequence phone-sequence--android" aria-label="StubFolio on Android">
+              <figure class="device-frame device-frame--phone">
+                <img alt="Paystub timeline on Android" width="1080" height="2400" loading="lazy" decoding="async" src="images/android-home.png">
+              </figure>
+              <figure class="device-frame device-frame--phone">
+                <img alt="Team pay run progress on Android" width="1080" height="2400" loading="lazy" decoding="async" src="images/android-pay-run.png">
+              </figure>
+              <figure class="device-frame device-frame--phone">
+                <img alt="Finished payslip PDF preview on Android" width="1080" height="2400" loading="lazy" decoding="async" src="images/android-pdf-preview.png">
+              </figure>
+            </div>
+          </div>
+        </section>
         <section class="privacy-section section" id="privacy">
           <div class="page-shell">
             <div class="section-heading section-heading--centered">
-              <p class="eyebrow">Private, offline, and in sync</p>
+              <p class="eyebrow">Private, offline, and in your control</p>
               <h2>Your records stay in your hands.</h2>
-              <p>StubFolio is local-first. Create without a connection, then use private iCloud sync across your Apple devices when you choose.</p>
+              <p>StubFolio is local-first on every device. Create without a connection, sync privately with iCloud across your Apple devices when you choose, and keep Android records on your phone and in its backup.</p>
             </div>
             <div class="privacy-grid">
               <article>
@@ -349,7 +401,7 @@
                   </path>
                 </svg>
                 <h3>Offline-first</h3>
-                <p>Create and review paystubs without an internet connection.</p>
+                <p>Create and review paystubs without an internet connection on iPhone, iPad, or Android.</p>
               </article>
               <article>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true">
@@ -358,8 +410,8 @@
                   <path d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Zm0,160H72a48,48,0,0,1,0-96c1.1,0,2.2,0,3.29.11A88,88,0,0,0,72,128a8,8,0,0,0,16,0,72,72,0,1,1,72,72Zm37.66-93.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L144,148.69l42.34-42.35A8,8,0,0,1,197.66,106.34Z">
                   </path>
                 </svg>
-                <h3>Private iCloud sync</h3>
-                <p>Keep your records available across your own Apple devices.</p>
+                <h3>Private sync and backup</h3>
+                <p>iCloud keeps records on your own Apple devices. On Android, records stay on your phone and in its backup.</p>
               </article>
               <article>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true">
@@ -369,8 +421,49 @@
                   </path>
                 </svg>
                 <h3>You choose when to share</h3>
-                <p>Preview the finished PDF, then export it through the system share sheet.</p>
+                <p>Preview the finished PDF, then share it through your device&#8217;s share sheet.</p>
               </article>
+            </div>
+            <div class="privacy-policy" id="privacy-policy" aria-labelledby="privacy-policy-title">
+              <div class="privacy-policy__header">
+                <h3 id="privacy-policy-title">Privacy policy</h3>
+                <p class="privacy-policy__meta">Effective 13 October 2026</p>
+              </div>
+              <p class="privacy-policy__intro">This policy covers the StubFolio apps for iPhone, iPad, and Android. StubFolio is provided by Karma Academy Pty Ltd.</p>
+              <dl class="privacy-policy__list">
+                <div>
+                  <dt>Your records</dt>
+                  <dd>The businesses, people, pay runs, and paystubs you enter are stored in the app on your device. StubFolio has no account or sign-in, and we never receive your records.</dd>
+                </div>
+                <div>
+                  <dt>Sync and backup</dt>
+                  <dd>On iPhone and iPad, records sync through your private iCloud database when iCloud is turned on for your Apple account. On Android, records are included in Android&#8217;s device backup to your Google account when backup is turned on. Apple and Google run these services under their own privacy policies.</dd>
+                </div>
+                <div>
+                  <dt>Contacts</dt>
+                  <dd>StubFolio asks for access to your contacts only when you choose to import a person. The details of the contact you pick are copied into that person&#8217;s record on your device and are not sent anywhere.</dd>
+                </div>
+                <div>
+                  <dt>Purchases</dt>
+                  <dd>Subscriptions and the lifetime purchase are processed by the App Store or Google Play. We do not receive your payment details.</dd>
+                </div>
+                <div>
+                  <dt>App recommendations</dt>
+                  <dd>On iPhone and iPad, the Settings screen shows a card recommending other apps. Its provider records anonymous views and taps of that card. It does not store a device identifier or IP address, does not receive your records, and does not track you across apps. The Android app has no ads, analytics, or tracking.</dd>
+                </div>
+                <div>
+                  <dt>Sharing</dt>
+                  <dd>Documents and exports leave the app only when you share or save them to an app, folder, service, or person you choose.</dd>
+                </div>
+                <div>
+                  <dt>Deleting your data</dt>
+                  <dd>You can delete records in the app at any time. Deleting the app removes its data from your device. Copies in iCloud or an Android backup can be removed through your Apple or Google account settings.</dd>
+                </div>
+                <div>
+                  <dt>Changes and contact</dt>
+                  <dd>We will update the effective date above when this policy changes. Send privacy questions to <a href="mailto:support@karmaacademy.com.au">support@karmaacademy.com.au</a>.</dd>
+                </div>
+              </dl>
             </div>
           </div>
         </section>
@@ -384,7 +477,7 @@
             <div class="faq-list">
               <details>
                 <summary>Can I create paystubs without an internet connection?</summary>
-                <p>Yes. Core paystub creation works offline. If you enable iCloud, your records can sync when your device is connected again.</p>
+                <p>Yes. Core paystub creation works offline on iPhone, iPad, and Android. On Apple devices with iCloud turned on, your records sync when your device is connected again.</p>
               </details>
               <details>
                 <summary>Which PDF page sizes does StubFolio support?</summary>
@@ -395,12 +488,16 @@
                 <p>No. StubFolio helps you structure, review, and present the figures you enter. It is not a tax-filing service and does not replace professional payroll or tax advice.</p>
               </details>
               <details>
-                <summary>Can I use StubFolio on both iPhone and iPad?</summary>
-                <p>Yes. StubFolio is designed for iPhone and iPad, with layouts that make quick edits comfortable on iPhone and detailed review easier on iPad.</p>
+                <summary>Which devices does StubFolio run on?</summary>
+                <p>StubFolio is available for iPhone and iPad on the <a href="https://apps.apple.com/app/id6793854994">App Store</a>, and for Android phones and tablets running Android 14 or later on <a href="https://play.google.com/store/apps/details?id=com.karmaacademy.payly">Google Play</a>. Layouts make quick edits comfortable on a phone and detailed review easier on a tablet.</p>
               </details>
               <details>
                 <summary>Where is my paystub data stored?</summary>
-                <p>StubFolio is local-first. Your work stays on your device, with private iCloud sync available when you enable it through your Apple account.</p>
+                <p>StubFolio is local-first and has no account. Your work stays on your device. On iPhone and iPad, private iCloud sync is available when you turn it on through your Apple account. On Android, records are included in your device backup to your Google account when Android backup is on.</p>
+              </details>
+              <details>
+                <summary>Do my records and purchases move between Apple devices and Android?</summary>
+                <p>No. The Apple and Android apps keep their records separately, and there is no StubFolio account to link them. Purchases are made through the App Store or Google Play and apply only to the app from that store.</p>
               </details>
             </div>
           </div>
@@ -409,13 +506,18 @@
           <div class="page-shell download-panel">
             <img class="download-panel__icon" alt="" width="1024" height="1024" loading="lazy" src="images/stubfolio-icon.jpg">
             <div>
-              <p class="eyebrow">Paystub maker for iPhone and iPad</p>
+              <p class="eyebrow">Paystub maker for iPhone, iPad, and Android</p>
               <h2 id="download-title">Make every payday look professional.</h2>
               <p>Create a polished pay stub PDF in minutes, then preview, export, and share.</p>
             </div>
-            <a class="app-store-button" href="https://apps.apple.com/app/id6793854994" aria-label="Download StubFolio on the App Store" data-cta-location="footer">
-              <img alt="Download on the App Store" width="924" height="310" src="images/download-on-app-store.svg">
-            </a>
+            <div class="store-badges">
+              <a class="app-store-button" href="https://apps.apple.com/app/id6793854994" aria-label="Download StubFolio on the App Store" data-cta-location="download">
+                <img alt="Download on the App Store" width="924" height="310" src="images/download-on-app-store.svg">
+              </a>
+              <a class="google-play-button" href="https://play.google.com/store/apps/details?id=com.karmaacademy.payly" aria-label="Get StubFolio on Google Play" data-cta-location="download">
+                <img alt="Get it on Google Play" width="239" height="71" src="images/get-it-on-google-play.svg">
+              </a>
+            </div>
           </div>
         </section>
       </main>
@@ -426,30 +528,41 @@
               <img src="images/stubfolio-icon.jpg" alt="" width="1024" height="1024" loading="lazy">
               <span>StubFolio</span>
             </a>
-            <p>Professional paystubs for iPhone and iPad: clear, private, and ready when payday is.</p>
-            <a class="app-store-button app-store-button--footer" href="https://apps.apple.com/app/id6793854994" aria-label="Download StubFolio on the App Store">
-              <img src="images/download-on-app-store.svg" alt="Download on the App Store" width="924" height="310">
-            </a>
+            <p>Professional paystubs for iPhone, iPad, and Android: clear, private, and ready when payday is.</p>
+            <div class="store-badges store-badges--footer">
+              <a class="app-store-button" href="https://apps.apple.com/app/id6793854994" aria-label="Download StubFolio on the App Store" data-cta-location="site-footer">
+                <img alt="Download on the App Store" width="924" height="310" src="images/download-on-app-store.svg">
+              </a>
+              <a class="google-play-button" href="https://play.google.com/store/apps/details?id=com.karmaacademy.payly" aria-label="Get StubFolio on Google Play" data-cta-location="site-footer">
+                <img alt="Get it on Google Play" width="239" height="71" src="images/get-it-on-google-play.svg">
+              </a>
+            </div>
           </div>
           <div class="site-footer__links">
             <nav aria-label="Explore StubFolio">
               <p class="site-footer__label">Explore</p>
               <a href="#features">Features</a>
               <a href="#how-it-works">How it works</a>
+              <a href="#android">Android</a>
               <a href="#privacy">Privacy</a>
               <a href="#faq">FAQ</a>
             </nav>
             <nav aria-label="StubFolio support and legal">
               <p class="site-footer__label">Support &amp; legal</p>
               <a href="mailto:support@karmaacademy.com.au">Support</a>
+              <a href="#privacy-policy">Privacy Policy</a>
               <a href="terms.html">Terms of Use</a>
               <a href="https://apps.apple.com/app/id6793854994">View on the App Store</a>
+              <a href="https://play.google.com/store/apps/details?id=com.karmaacademy.payly">Get it on Google Play</a>
             </nav>
           </div>
         </div>
         <div class="page-shell site-footer__bottom">
           <p>© 2026 Karma Academy. All rights reserved.</p>
-          <p>Made for iPhone and iPad.</p>
+          <p>Made for iPhone, iPad, and Android.</p>
+        </div>
+        <div class="page-shell site-footer__trademarks">
+          <p>Apple, the Apple logo, iPhone, and iPad are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc. Google Play, the Google Play logo, and Android are trademarks of Google LLC.</p>
         </div>
       </footer>
     </div>
